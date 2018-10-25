@@ -16,7 +16,7 @@
 * You can search, view and copy these snippets from a terminal, using the CLI application from [this repo](https://github.com/sQVe/30s).
 * If you want to follow 30-seconds-of-code on social media, you can find us on [Facebook](https://www.facebook.com/30secondsofcode), [Instagram](https://www.instagram.com/30secondsofcode) and [Twitter](https://twitter.com/30secondsofcode).
 
-#### Related projects
+#### Related projects 30 seconds of code 
 
 * [30 Seconds of CSS](https://30-seconds.github.io/30-seconds-of-css/)
 * [30 Seconds of Interviews](https://30secondsofinterviews.org/)
@@ -3261,7 +3261,7 @@ bottomVisible(); // true
 
 ⚠️ **NOTICE:** The same functionality can be easily implemented by using the new asynchronous Clipboard API, which is still experimental but should be used in the future instead of this snippet. Find out more about it [here](https://github.com/w3c/clipboard-apis/blob/master/explainer.adoc#writing-to-the-clipboard).
 
-Copy a string to the clipboard. 
+Copy a string to the clipboard.
 Only works as a result of user action (i.e. inside a `click` event listener).
 
 Create a new `<textarea>` element, fill it with the supplied data and add it to the HTML document.
@@ -3338,11 +3338,11 @@ counter('#my-id', 1, 1000, 5, 2000); // Creates a 2-second timer for the element
 
 ### createElement
 
-Creates an element from a string (without appending it to the document). 
+Creates an element from a string (without appending it to the document).
 If the given string contains multiple elements, only the first one will be returned.
 
 Use `document.createElement()` to create a new element.
-Set its `innerHTML` to the string supplied as the argument. 
+Set its `innerHTML` to the string supplied as the argument.
 Use `ParentNode.firstElementChild` to return the element version of the string.
 
 ```js
@@ -3815,7 +3815,7 @@ obs.disconnect(); // Disconnects the observer and stops logging mutations on the
 
 Removes an event listener from an element.
 
-Use `EventTarget.removeEventListener()` to remove an event listener from an element. 
+Use `EventTarget.removeEventListener()` to remove an event listener from an element.
 Omit the fourth argument `opts` to use `false` or specify it based on the options used when the event listener was added.
 
 ```js
@@ -3869,7 +3869,7 @@ on(document.body, 'click', fn, { options: true }); // use capturing instead of b
 
 Run the callback whenever the user input type changes (`mouse` or `touch`). Useful for enabling/disabling code depending on the input device. This process is dynamic and works with hybrid devices (e.g. touchscreen laptops).
 
-Use two event listeners. Assume `mouse` input initially and bind a `touchstart` event listener to the document. 
+Use two event listeners. Assume `mouse` input initially and bind a `touchstart` event listener to the document.
 On `touchstart`, add a `mousemove` event listener to listen for two consecutive `mousemove` events firing within 20ms, using `performance.now()`.
 Run the callback with the input type as an argument in either of these situations.
 
@@ -3936,9 +3936,9 @@ prefix('appearance'); // 'appearance' on a supported browser, otherwise 'webkitA
 
 Invokes the provided callback on each animation frame.
 
-Use recursion. 
-Provided that `running` is `true`, continue invoking `window.requestAnimationFrame()` which invokes the provided callback. 
-Return an object with two methods `start` and `stop` to allow manual control of the recording. 
+Use recursion.
+Provided that `running` is `true`, continue invoking `window.requestAnimationFrame()` which invokes the provided callback.
+Return an object with two methods `start` and `stop` to allow manual control of the recording.
 Omit the second argument, `autoStart`, to implicitly call `start` when the function is invoked.
 
 ```js
@@ -4128,7 +4128,7 @@ show(...document.querySelectorAll('img')); // Shows all <img> elements on the pa
 
 Smoothly scrolls the element on which it's called into the visible area of the browser window.
 
-Use `.scrollIntoView` method to scroll the element. 
+Use `.scrollIntoView` method to scroll the element.
 Pass `{ behavior: 'smooth' }` to `.scrollIntoView` so it scrolls smoothly.
 
 ```js
@@ -4848,11 +4848,11 @@ functionName(Math.max); // max (logged in debug channel of console)
 
 ### hz
 
-Returns the number of times a function executed per second. 
+Returns the number of times a function executed per second.
 `hz` is the unit for `hertz`, the unit of frequency defined as one cycle per second.
 
-Use `performance.now()` to get the difference in milliseconds before and after the iteration loop to calculate the time elapsed executing the function `iterations` times. 
-Return the number of cycles per second by converting milliseconds to seconds and dividing it by the time elapsed. 
+Use `performance.now()` to get the difference in milliseconds before and after the iteration loop to calculate the time elapsed executing the function `iterations` times.
+Return the number of cycles per second by converting milliseconds to seconds and dividing it by the time elapsed.
 Omit the second argument, `iterations`, to use the default of 100 iterations.
 
 ```js
@@ -5206,7 +5206,7 @@ unfold(f, 10); // [-10, -20, -30, -40, -50]
 
 ### when
 
-Tests a value, `x`, against a predicate function. If `true`, return `fn(x)`. Else, return `x`. 
+Tests a value, `x`, against a predicate function. If `true`, return `fn(x)`. Else, return `x`.
 
 Return a function expecting a single value, `x`, that returns the appropriate value based on `pred`.
 
@@ -5429,7 +5429,7 @@ The array should be ordered from best performer to worst performer (winner -> lo
 
 Use the exponent `**` operator and math operators to compute the expected score (chance of winning).
 of each opponent and compute the new rating for each.
-Loop through the ratings, using each permutation to compute the post-Elo rating for each player in a pairwise fashion. 
+Loop through the ratings, using each permutation to compute the post-Elo rating for each player in a pairwise fashion.
 Omit the second argument to use the default `kFactor` of 32.
 
 ```js
@@ -7412,7 +7412,7 @@ const b = shallowClone(a); // a !== b
 
 Get size of arrays, objects or strings.
 
-Get type of `val` (`array`, `object` or `string`). 
+Get type of `val` (`array`, `object` or `string`).
 Use `length` property for arrays.
 Use `length` or `size` value if available or number of keys for objects.
 Use `size` of a [`Blob` object](https://developer.mozilla.org/en-US/docs/Web/API/Blob) created from `val` for strings.
@@ -8599,7 +8599,7 @@ isNumber(1); // true
 
 Returns a boolean determining if the passed value is an object or not.
 
-Uses the  `Object` constructor to create an object wrapper for the given value. 
+Uses the  `Object` constructor to create an object wrapper for the given value.
 If the value is `null` or `undefined`, create and return an empty object. Οtherwise, return an object of a type that corresponds to the given value.
 
 ```js
@@ -9486,4 +9486,3 @@ yesNo('Foo', true); // true
 ## Credits
 
 *This README is built using [markdown-builder](https://github.com/30-seconds/markdown-builder).*
-
